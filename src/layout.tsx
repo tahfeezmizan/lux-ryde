@@ -6,7 +6,7 @@ import { Outfit } from "next/font/google"; // Import Outfit font
 import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
-  title: "Flex||The journey",
+  title: "LuxRide - Premium Urban Transport & Rewards Platform",
   description:
     "",
 };

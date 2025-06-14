@@ -6,7 +6,7 @@ export default function NotFound() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen px-4 py-12 text-center">
       <div className="space-y-6 max-w-md">
-        <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
+        <h1 className="text-4xl font-extrabold text-secondery tracking-tight sm:text-5xl md:text-6xl">
           404 - Under Construction
         </h1>
 
