@@ -3,15 +3,10 @@
 import { useEffect, useState } from "react";
 import {
   ArrowUpRight,
-<<<<<<< HEAD
-  DollarSign,
-  History,
-=======
 
   DollarSign,
   History,
 
->>>>>>> c9dadefa123a42dc7b054897f6074b00bd98e7c8
   TrendingUp,
   Users,
 } from "lucide-react";
@@ -21,10 +16,6 @@ import {
   Card,
   CardContent,
   CardDescription,
-<<<<<<< HEAD
-=======
-
->>>>>>> c9dadefa123a42dc7b054897f6074b00bd98e7c8
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -52,10 +43,6 @@ import {
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
-<<<<<<< HEAD
-
-
-=======
 // import {
 //   Tooltip,
 //   TooltipContent,
@@ -68,7 +55,6 @@ import { Badge } from "@/components/ui/badge";
 //   DropdownMenuItem,
 //   DropdownMenuTrigger,
 // } from "@/components/ui/dropdown-menu";
->>>>>>> c9dadefa123a42dc7b054897f6074b00bd98e7c8
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   BarChart,
@@ -217,8 +203,6 @@ const CreditPage = () => {
     );
   };
 
-<<<<<<< HEAD
-=======
   // const copyReferralLink = () => {
   //   navigator.clipboard.writeText(creditSummary.referralLink);
   //   setCopied(true);
@@ -226,7 +210,6 @@ const CreditPage = () => {
 
   //   displayNotification("Referral link copied to clipboard!");
   // };
->>>>>>> c9dadefa123a42dc7b054897f6074b00bd98e7c8
 
   const displayNotification = (message: string) => {
     setNotificationMessage(message);

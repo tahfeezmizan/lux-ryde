@@ -106,11 +106,7 @@ export default function UpdateProfile({ user, onUpdate }: UpdateProfileProps) {
                   name="firstName"
                   value={formData.firstName}
                   onChange={handleChange}
-<<<<<<< HEAD
-                  className=" border-gray-700 text-white"
-=======
                   className=" border-[#F0D68A] text-white"
->>>>>>> c9dadefa123a42dc7b054897f6074b00bd98e7c8
                 />
               </div>
               <div className="space-y-2">
@@ -122,11 +118,7 @@ export default function UpdateProfile({ user, onUpdate }: UpdateProfileProps) {
                   name="lastName"
                   value={formData.lastName}
                   onChange={handleChange}
-<<<<<<< HEAD
-                  className=" border-gray-700 text-white"
-=======
                   className=" border-[#F0D68A] text-white"
->>>>>>> c9dadefa123a42dc7b054897f6074b00bd98e7c8
                 />
               </div>
             </div>
@@ -140,11 +132,7 @@ export default function UpdateProfile({ user, onUpdate }: UpdateProfileProps) {
                 name="phoneNumber"
                 value={formData.phoneNumber}
                 onChange={handleChange}
-<<<<<<< HEAD
-                className=" border-gray-700 text-white"
-=======
                 className=" border-[#F0D68A] text-white"
->>>>>>> c9dadefa123a42dc7b054897f6074b00bd98e7c8
               />
             </div>
 
@@ -157,11 +145,7 @@ export default function UpdateProfile({ user, onUpdate }: UpdateProfileProps) {
                 name="address"
                 value={formData.address}
                 onChange={handleChange}
-<<<<<<< HEAD
-                className=" border-gray-700 text-white"
-=======
                 className=" border-[#F0D68A] text-white"
->>>>>>> c9dadefa123a42dc7b054897f6074b00bd98e7c8
               />
             </div>
 
@@ -175,11 +159,7 @@ export default function UpdateProfile({ user, onUpdate }: UpdateProfileProps) {
                   name="city"
                   value={formData.city}
                   onChange={handleChange}
-<<<<<<< HEAD
-                  className="border-gray-700 text-white"
-=======
                   className=" border-[#F0D68A] text-white"
->>>>>>> c9dadefa123a42dc7b054897f6074b00bd98e7c8
                 />
               </div>
               <div className="space-y-2">
@@ -191,11 +171,7 @@ export default function UpdateProfile({ user, onUpdate }: UpdateProfileProps) {
                   name="state"
                   value={formData.state}
                   onChange={handleChange}
-<<<<<<< HEAD
-                  className="border-gray-700 text-white"
-=======
                   className=" border-[#F0D68A] text-white"
->>>>>>> c9dadefa123a42dc7b054897f6074b00bd98e7c8
                 />
               </div>
               <div className="space-y-2">
@@ -207,11 +183,7 @@ export default function UpdateProfile({ user, onUpdate }: UpdateProfileProps) {
                   name="zipCode"
                   value={formData.zipCode}
                   onChange={handleChange}
-<<<<<<< HEAD
-                  className=" border-gray-700 text-white"
-=======
                   className=" border-[#F0D68A] text-white"
->>>>>>> c9dadefa123a42dc7b054897f6074b00bd98e7c8
                 />
               </div>
             </div>
@@ -227,11 +199,7 @@ export default function UpdateProfile({ user, onUpdate }: UpdateProfileProps) {
                     name="carModel"
                     value={formData.carModel}
                     onChange={handleChange}
-<<<<<<< HEAD
-                    className=" border-gray-700 text-white"
-=======
                     className=" border-[#F0D68A] text-white"
->>>>>>> c9dadefa123a42dc7b054897f6074b00bd98e7c8
                   />
                 </div>
                 <div className="space-y-2">
@@ -243,11 +211,7 @@ export default function UpdateProfile({ user, onUpdate }: UpdateProfileProps) {
                     name="licensePlate"
                     value={formData.licensePlate}
                     onChange={handleChange}
-<<<<<<< HEAD
-                    className=" border-gray-700 text-white"
-=======
                     className=" border-[#F0D68A]0 text-white"
->>>>>>> c9dadefa123a42dc7b054897f6074b00bd98e7c8
                   />
                 </div>
               </>

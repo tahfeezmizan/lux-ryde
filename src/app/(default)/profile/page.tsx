@@ -1,13 +1,15 @@
-<<<<<<< HEAD
-/* eslint-disable @typescript-eslint/no-explicit-any */
-=======
->>>>>>> c9dadefa123a42dc7b054897f6074b00bd98e7c8
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Toaster } from "@/components/ui/toaster";
@@ -24,10 +26,6 @@ import {
 import UpdateProfile from "@/components/profile/UpdateProfile";
 
 export default function ProfilePage() {
-<<<<<<< HEAD
-  const user = {
-    avatarUrl: "/assets/avatar1.png",
-=======
   const user: {
     avatarUrl: string;
     name: string;
@@ -47,7 +45,6 @@ export default function ProfilePage() {
     updatedAt: string;
   } = {
     avatarUrl: "/placeholder.svg?height=128&width=128",
->>>>>>> c9dadefa123a42dc7b054897f6074b00bd98e7c8
     name: "John Doe",
     role: "driver",
     firstName: "John",
@@ -80,11 +77,17 @@ export default function ProfilePage() {
   const handleProfileUpdate = (updatedUser: Partial<typeof user>) => {
     setProfileData((prev) => ({
       ...prev,
-      user: {
-        ...prev.user,
-        ...updatedUser,
-        updatedAt: new Date().toISOString(),
-      },
+      user: prev.user
+        ? {
+            ...prev.user,
+            ...updatedUser,
+            updatedAt: new Date().toISOString(),
+          }
+        : {
+            ...user,
+            ...updatedUser,
+            updatedAt: new Date().toISOString(),
+          },
     }));
   };
 
@@ -100,27 +103,30 @@ export default function ProfilePage() {
           <h1 className="text-4xl font-bold tracking-tight text-white mb-2 bg-clip-text text-transparent bg-gradient-to-r ">
             Your Profile
           </h1>
-          <p className="text-white max-w-2xl">View and manage your personal information and account settings</p>
+          <p className="text-white max-w-2xl">
+            View and manage your personal information and account settings
+          </p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-[1fr_2fr]">
           {/* Profile Card */}
           <Card className="bg-gradient-to-b from-gray-800/80 to-gray-900/80 border-gray-700 shadow-xl overflow-hidden backdrop-blur-sm">
-<<<<<<< HEAD
-            <div className="h-24 bg-gradient-to-r bg-"></div>
-=======
             <div className="h-24 bg-[#F0D68A]"></div>
->>>>>>> c9dadefa123a42dc7b054897f6074b00bd98e7c8
             <CardContent className="p-6 flex flex-col items-center text-center -mt-12">
               <div className="mb-4">
                 <Avatar className="h-32 w-32 border-4 border-gray-800 shadow-lg">
                   <AvatarImage src={user.avatarUrl} alt={user.name} />
                   <AvatarFallback className="text-4xl ">
-                    {user.name.split(" ").map((n: string) => n[0]).join("")}
+                    {user.name
+                      .split(" ")
+                      .map((n: string) => n[0])
+                      .join("")}
                   </AvatarFallback>
                 </Avatar>
               </div>
-              <h2 className="text-2xl font-bold text-black mt-2">{user.name}</h2>
+              <h2 className="text-2xl font-bold text-black mt-2">
+                {user.name}
+              </h2>
               <div className="mt-2 mb-6">
                 <Badge
                   variant="secondary"
@@ -143,7 +149,9 @@ export default function ProfilePage() {
                 <div className="grid grid-cols-2 gap-4 text-center">
                   <div className="space-y-1">
                     <p className="text-sm text-gray-400">Member Since</p>
-                    <p className="text-lg font-medium text-black">{new Date(user.createdAt).getFullYear()}</p>
+                    <p className="text-lg font-medium text-black">
+                      {new Date(user.createdAt).getFullYear()}
+                    </p>
                   </div>
                   <div className="space-y-1">
                     <p className="text-sm text-gray-400">Status</p>
@@ -161,7 +169,9 @@ export default function ProfilePage() {
           {/* Details Card */}
           <Card className="bg-gradient-to-b from-gray-800/80 to-gray-900/80 border-gray-700 shadow-xl backdrop-blur-sm">
             <CardHeader>
-              <CardTitle className="text-2xl text-white">Account Details</CardTitle>
+              <CardTitle className="text-2xl text-white">
+                Account Details
+              </CardTitle>
               <CardDescription className="text-gray-400">
                 Your personal information and account settings
               </CardDescription>
@@ -171,7 +181,8 @@ export default function ProfilePage() {
                 {/* Personal Information */}
                 <div className="space-y-1 p-4 rounded-lg bg-gray-800/50 border border-gray-700">
                   <h3 className="text-sm font-medium text-gray-400 flex items-center gap-2 mb-3">
-                    <UserIcon className="h-4 w-4 text-blue-400" /> Personal Information
+                    <UserIcon className="h-4 w-4 text-blue-400" /> Personal
+                    Information
                   </h3>
 
                   <div className="space-y-3">
@@ -209,7 +220,9 @@ export default function ProfilePage() {
                   <div className="space-y-3">
                     <div>
                       <p className="text-xs text-gray-500">Address</p>
-                      <p className="text-black">{user.address || "Not provided"}</p>
+                      <p className="text-black">
+                        {user.address || "Not provided"}
+                      </p>
                     </div>
 
                     <div>
@@ -226,13 +239,16 @@ export default function ProfilePage() {
               {user.role === "driver" && (
                 <div className="p-4 rounded-lg bg-gray-800/50 border border-gray-700">
                   <h3 className="text-sm font-medium text-gray-400 flex items-center gap-2 mb-3">
-                    <CarIcon className="h-4 w-4 text-green-400" /> Vehicle Information
+                    <CarIcon className="h-4 w-4 text-green-400" /> Vehicle
+                    Information
                   </h3>
 
                   <div className="grid gap-4 sm:grid-cols-2">
                     <div>
                       <p className="text-xs text-gray-500">Car Model</p>
-                      <p className="text-black">{user.carModel || "Not provided"}</p>
+                      <p className="text-black">
+                        {user.carModel || "Not provided"}
+                      </p>
                     </div>
 
                     <div>
@@ -249,13 +265,16 @@ export default function ProfilePage() {
               {/* Account Details */}
               <div className="p-4 rounded-lg bg-gray-800/50 border border-gray-700">
                 <h3 className="text-sm font-medium text-gray-400 flex items-center gap-2 mb-3">
-                  <ShieldIcon className="h-4 w-4 text-amber-400" /> Account Information
+                  <ShieldIcon className="h-4 w-4 text-amber-400" /> Account
+                  Information
                 </h3>
 
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div>
                     <p className="text-xs text-gray-500">User ID</p>
-                    <p className="text-black font-mono text-sm truncate">{user.id}</p>
+                    <p className="text-black font-mono text-sm truncate">
+                      {user.id}
+                    </p>
                   </div>
 
                   <div>
